@@ -26,4 +26,16 @@
         </createTable>
     </changeSet>
 
+    <changeSet id="3" author="viktor" context="main">
+        <addColumn tableName="clients">
+            <column name="version" type="BIGINT"/>
+        </addColumn>
+        <addColumn tableName="clients">
+            <column name="created_at" type="TIMESTAMP WITH TIME ZONE"/>
+        </addColumn>
+        <addColumn tableName="clients">
+            <column name="modified_at" type="TIMESTAMP WITH TIME ZONE"/>
+        </addColumn>
+    </changeSet>
+
 </databaseChangeLog>
