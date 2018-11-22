@@ -1,7 +1,6 @@
 rootProject.name = 'java3'
 
+include 'common-dtos'
+
 include 'core-api'
 include 'core-app'
-
-
-

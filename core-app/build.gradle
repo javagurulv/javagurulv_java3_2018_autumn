@@ -4,6 +4,7 @@ apply plugin: 'org.springframework.boot'
 
 project(":core-app") {
     dependencies {
+        compile project(":common-dtos")
         compile project(":core-api")
 
         compile libs.spring_boot_starter_web
