@@ -1,5 +1,8 @@
 package lv.javaguru.java3.core.services.clients;
 
+import lv.javaguru.java3.common.errors.ErrorCode;
+import lv.javaguru.java3.common.errors.ErrorEmitter;
+import lv.javaguru.java3.core.api.errors.CoreValidationError;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
@@ -14,19 +17,35 @@ class ClientValidatorImpl implements ClientValidator {
 
     private void validateLogin(String login) {
         if (login == null) {
-            throw new IllegalArgumentException("Client login must not be null");
+            throw new CoreValidationError(
+                    ErrorCode.VALIDATION_MISSING_FIELD,
+                    "login",
+                    ErrorEmitter.CORE_APP
+            );
         }
         if (StringUtils.isEmpty(login)) {
-            throw new IllegalArgumentException("Client login must not be empty");
+            throw new CoreValidationError(
+                    ErrorCode.VALIDATION_INVALID_FIELD_VALUE,
+                    "login",
+                    ErrorEmitter.CORE_APP
+            );
         }
     }
 
     private void validatePassword(String password) {
         if (password == null) {
-            throw new IllegalArgumentException("Client password must not be null");
+            throw new CoreValidationError(
+                    ErrorCode.VALIDATION_MISSING_FIELD,
+                    "password",
+                    ErrorEmitter.CORE_APP
+            );
         }
         if (StringUtils.isEmpty(password)) {
-            throw new IllegalArgumentException("Client password must not be empty");
+            throw new CoreValidationError(
+                    ErrorCode.VALIDATION_INVALID_FIELD_VALUE,
+                    "password",
+                    ErrorEmitter.CORE_APP
+            );
         }
     }
 

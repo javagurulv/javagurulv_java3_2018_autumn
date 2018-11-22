@@ -22,12 +22,12 @@ import org.springframework.web.bind.annotation.RestController;
         produces = MediaType.APPLICATION_JSON_VALUE,
         consumes = MediaType.APPLICATION_JSON_VALUE
 )
-public class ClientController {
+public class ClientRestController {
 
     private CommandExecutor commandExecutor;
 
     @Autowired
-    public ClientController(CommandExecutor commandExecutor) {
+    public ClientRestController(CommandExecutor commandExecutor) {
         this.commandExecutor = commandExecutor;
     }
 
