@@ -1,4 +1,4 @@
-package lv.javaguru.java3.api.dtos;
+package lv.javaguru.java3.common.dtos;
 
 public class ClientDTO {
 

@@ -1,6 +1,6 @@
-package lv.javaguru.java3.api.commands.clients;
+package lv.javaguru.java3.core.api.commands.clients;
 
-import lv.javaguru.java3.api.commands.DomainCommand;
+import lv.javaguru.java3.core.api.commands.DomainCommand;
 
 public class UpdateClientCommand implements DomainCommand<UpdateClientResult> {
 

@@ -1,7 +1,8 @@
 package lv.javaguru.java3.core.services;
 
-import lv.javaguru.java3.api.commands.DomainCommand;
-import lv.javaguru.java3.api.commands.DomainCommandResult;
+import lv.javaguru.java3.core.api.CommandExecutor;
+import lv.javaguru.java3.core.api.commands.DomainCommand;
+import lv.javaguru.java3.core.api.commands.DomainCommandResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;

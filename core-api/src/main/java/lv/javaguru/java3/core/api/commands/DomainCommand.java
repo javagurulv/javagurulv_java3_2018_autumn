@@ -1,4 +1,4 @@
-package lv.javaguru.java3.api.commands;
+package lv.javaguru.java3.core.api.commands;
 
 public interface DomainCommand<T extends DomainCommandResult> {
 

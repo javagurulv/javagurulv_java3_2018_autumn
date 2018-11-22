@@ -1,7 +1,7 @@
-package lv.javaguru.java3.api.commands.clients;
+package lv.javaguru.java3.core.api.commands.clients;
 
-import lv.javaguru.java3.api.commands.DomainCommandResult;
-import lv.javaguru.java3.api.dtos.ClientDTO;
+import lv.javaguru.java3.core.api.commands.DomainCommandResult;
+import lv.javaguru.java3.common.dtos.ClientDTO;
 
 public class CreateClientResult implements DomainCommandResult {
 

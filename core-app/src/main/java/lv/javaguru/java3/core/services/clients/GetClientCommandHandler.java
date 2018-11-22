@@ -1,8 +1,8 @@
 package lv.javaguru.java3.core.services.clients;
 
-import lv.javaguru.java3.api.commands.clients.GetClientCommand;
-import lv.javaguru.java3.api.commands.clients.GetClientResult;
-import lv.javaguru.java3.api.dtos.ClientDTO;
+import lv.javaguru.java3.core.api.commands.clients.GetClientCommand;
+import lv.javaguru.java3.core.api.commands.clients.GetClientResult;
+import lv.javaguru.java3.common.dtos.ClientDTO;
 import lv.javaguru.java3.core.domain.Client;
 import lv.javaguru.java3.core.services.DomainCommandHandler;
 import org.springframework.beans.factory.annotation.Autowired;
