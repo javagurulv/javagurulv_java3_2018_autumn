@@ -2,8 +2,8 @@ package lv.javaguru.java3.core.rest;
 
 import lv.javaguru.java3.common.dtos.ClientDTO;
 import lv.javaguru.java3.core.api.CommandExecutor;
-import lv.javaguru.java3.core.api.commands.clients.CreateClientCommand;
-import lv.javaguru.java3.core.api.commands.clients.CreateClientResult;
+import lv.javaguru.java3.core.api.commands.clients.RegisterClientCommand;
+import lv.javaguru.java3.core.api.commands.clients.RegisterClientResult;
 import lv.javaguru.java3.core.api.commands.clients.GetClientCommand;
 import lv.javaguru.java3.core.api.commands.clients.GetClientResult;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,10 +34,10 @@ public class ClientRestController {
     @RequestMapping(method = RequestMethod.POST, value="/clients")
     @ResponseBody
     public ClientDTO create(ClientDTO clientDTO) {
-        CreateClientCommand command = new CreateClientCommand(
+        RegisterClientCommand command = new RegisterClientCommand(
                 clientDTO.getLogin(), clientDTO.getPassword()
         );
-        CreateClientResult result = commandExecutor.execute(command);
+        RegisterClientResult result = commandExecutor.execute(command);
         return result.getClient();
     }
 

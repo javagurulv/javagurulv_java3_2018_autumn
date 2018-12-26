@@ -2,7 +2,7 @@ package lv.javaguru.java3.core.services.clients;
 
 import lv.javaguru.java3.common.errors.ErrorCode;
 import lv.javaguru.java3.common.errors.ErrorEmitter;
-import lv.javaguru.java3.core.api.errors.CoreValidationError;
+import lv.javaguru.java3.common.errors.ValidationError;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -20,7 +20,7 @@ public class ClientValidatorImplTest {
 
     @Test
     public void shouldThrowValidationExceptionWhenLoginIsNull() {
-        thrown.expect(CoreValidationError.class);
+        thrown.expect(ValidationError.class);
         thrown.expect(hasProperty("errorCode", is(ErrorCode.VALIDATION_MISSING_FIELD)));
         thrown.expect(hasProperty("description", is("login")));
         thrown.expect(hasProperty("errorEmitter", is(ErrorEmitter.CORE_APP)));
@@ -29,7 +29,7 @@ public class ClientValidatorImplTest {
 
     @Test
     public void shouldThrowValidationExceptionWhenLoginIsEmpty() {
-        thrown.expect(CoreValidationError.class);
+        thrown.expect(ValidationError.class);
         thrown.expect(hasProperty("errorCode", is(ErrorCode.VALIDATION_INVALID_FIELD_VALUE)));
         thrown.expect(hasProperty("description", is("login")));
         thrown.expect(hasProperty("errorEmitter", is(ErrorEmitter.CORE_APP)));
@@ -38,7 +38,7 @@ public class ClientValidatorImplTest {
 
     @Test
     public void shouldThrowValidationExceptionWhenPasswordIsNull() {
-        thrown.expect(CoreValidationError.class);
+        thrown.expect(ValidationError.class);
         thrown.expect(hasProperty("errorCode", is(ErrorCode.VALIDATION_MISSING_FIELD)));
         thrown.expect(hasProperty("description", is("password")));
         thrown.expect(hasProperty("errorEmitter", is(ErrorEmitter.CORE_APP)));
@@ -47,7 +47,7 @@ public class ClientValidatorImplTest {
 
     @Test
     public void shouldThrowValidationExceptionWhenPasswordIsEmpty() {
-        thrown.expect(CoreValidationError.class);
+        thrown.expect(ValidationError.class);
         thrown.expect(hasProperty("errorCode", is(ErrorCode.VALIDATION_INVALID_FIELD_VALUE)));
         thrown.expect(hasProperty("description", is("password")));
         thrown.expect(hasProperty("errorEmitter", is(ErrorEmitter.CORE_APP)));

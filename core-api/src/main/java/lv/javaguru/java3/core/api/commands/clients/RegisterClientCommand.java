@@ -2,14 +2,14 @@ package lv.javaguru.java3.core.api.commands.clients;
 
 import lv.javaguru.java3.core.api.commands.DomainCommand;
 
-public class CreateClientCommand implements DomainCommand<CreateClientResult> {
+public class RegisterClientCommand implements DomainCommand<RegisterClientResult> {
 
     private String login;
     private String password;
 
 
-    public CreateClientCommand(String login,
-                               String password) {
+    public RegisterClientCommand(String login,
+                                 String password) {
         this.login = login;
         this.password = password;
     }

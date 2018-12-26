@@ -1,4 +1,4 @@
-package lv.javaguru.java3.core.rest;
+package lv.javaguru.java3.app.rest;
 
 import lv.javaguru.java3.common.errors.ErrorCode;
 import lv.javaguru.java3.common.errors.ErrorDTO;

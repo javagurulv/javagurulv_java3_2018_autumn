@@ -3,11 +3,11 @@ package lv.javaguru.java3.core.api.commands.clients;
 import lv.javaguru.java3.core.api.commands.DomainCommandResult;
 import lv.javaguru.java3.common.dtos.ClientDTO;
 
-public class CreateClientResult implements DomainCommandResult {
+public class RegisterClientResult implements DomainCommandResult {
 
 	private ClientDTO client;
 
-	public CreateClientResult(ClientDTO client) {
+	public RegisterClientResult(ClientDTO client) {
 		this.client = client;
 	}
 
